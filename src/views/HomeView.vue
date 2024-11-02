@@ -115,6 +115,7 @@ export default {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+        transition-duration: 1s;
 
         &:hover {
           scale: 1.3;
@@ -218,27 +219,22 @@ export default {
 
 @keyframes moveAround {
   0% {
-    opacity: 1;
     transform: translate(0, 0);
   }
 
   25% {
-    opacity: .8;
     transform: translate(15px, 15px);
   }
 
   50% {
-    opacity: .9;
     transform: translate(-15px, -15px);
   }
 
   75% {
-    opacity: .8;
     transform: translate(15px, -15px);
   }
 
   100% {
-    opacity: 1;
     transform: translate(0, 0);
   }
 }
