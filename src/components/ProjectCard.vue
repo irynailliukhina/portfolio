@@ -1,14 +1,16 @@
 <template>
   <div class="card">
-    <img :src="project.picture" />
+    <div class="card__img-wrap">
+      <img :src="project.picture" @load="addLoadedClass($event)" />
+    </div>
     <h5 class="card__name">{{ project.name }}</h5>
     <p class="card__desc">{{ project.desc }}</p>
     <div class="card__links">
-      <a :href="project.linkLive" v-if="project.linkLive">
+      <a :href="project.linkLive" v-if="project.linkLive" target="_blank">
         <font-awesome-icon :icon="['fas', 'globe']" class="live tooltip" />
         <span class="tooltip-text tooltip-text__live">Live website</span>
       </a>
-      <a :href="project.linkSourse" v-if="project.linkSourse">
+      <a :href="project.linkSourse" v-if="project.linkSourse" target="_blank">
         <font-awesome-icon :icon="['fas', 'code']" class="source tooltip" />
         <span class="tooltip-text tooltip-text__source">Source code</span>
       </a>
@@ -18,9 +20,13 @@
 
 <script>
 export default {
-
   props: {
     project: Object
+  },
+  methods: {
+    addLoadedClass(event) {
+      event.target.classList.add('loaded');
+    }
   }
 }
 </script>
@@ -75,8 +81,20 @@ export default {
     }
   }
 
-  img {
-    width: 100%
+  &__img-wrap {
+    height: 200px;
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+      width: auto;
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+
+    img.loaded {
+      opacity: 1;
+    }
   }
 
   &__links {

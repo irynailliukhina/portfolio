@@ -1,10 +1,39 @@
 <template>
   <RouterView v-slot="slotProps">
+    <SpinnerCustom :loading="loading" />
     <Transition name="route" mode="out-in">
-      <component :is="slotProps.Component" class="component"></component>
+      <div v-if="!loading">
+        <component :is="slotProps.Component" class="component"></component>
+      </div>
     </Transition>
   </RouterView>
 </template>
+
+<script>
+import SpinnerCustom from './components/SpinnerCustom.vue';
+
+export default {
+  components: {
+    SpinnerCustom,
+  },
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  mounted() {
+    window.addEventListener('load', this.handlePageLoad);
+  },
+  methods: {
+    handlePageLoad() {
+      this.loading = false;
+    },
+  },
+  beforeUnmount() {
+    window.removeEventListener('load', this.handlePageLoad);
+  },
+};
+</script>
 
 <style lang="scss">
 /* .route-enter-from {
