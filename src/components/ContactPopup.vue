@@ -16,10 +16,12 @@
           <div class="modal__input-group"> <label class="label">Message</label>
             <textarea required name="message" rows="4"></textarea>
           </div>
-          <button class="modal-default-button cancel" @click="$emit('close')">
-            Cancel
-          </button>
-          <button type="submit" class="send">Send</button>
+          <div class="buttons">
+            <button class="modal-default-button cancel" @click="$emit('close')">
+              Cancel
+            </button>
+            <button type="submit" class="send">Send</button>
+          </div>
         </form>
       </div>
       <div v-if="content === 'success'" class="modal__container">
@@ -238,6 +240,29 @@ export default {
   .modal__container {
     width: 100%;
     height: 100%;
+
+    input {
+      height: 40px;
+    }
+
+    input,
+    textarea {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    label {
+      font-size: 12px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .send {
+        margin: 0;
+      }
+    }
   }
 }
 </style>
