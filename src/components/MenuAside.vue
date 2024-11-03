@@ -34,15 +34,15 @@ export default {
 
       links: [
         {
-          text: "About",
+          text: "About me",
           route: "/portfolio"
         },
         {
-          text: "Work",
+          text: "Skills and projects",
           route: "/portfolio/#/work"
         }],
       contact: {
-        text: "Contact",
+        text: "Contact me",
         route: "/"
       }
     };
@@ -78,6 +78,10 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 0;
+
+    a {
+      white-space: nowrap;
+    }
   }
 
   &__button {

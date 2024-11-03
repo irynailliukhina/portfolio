@@ -62,7 +62,7 @@ export default {
   align-items: flex-start;
 
   &__wrapper {
-    background: rgb(100, 100, 100, 10%);
+    background: var(--c-black-mute);
     padding: 30px;
     border-radius: 30px;
     position: relative;

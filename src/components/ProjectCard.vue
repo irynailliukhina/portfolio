@@ -37,7 +37,7 @@ export default {
   flex-direction: column;
   align-items: start;
   padding: 30px 30px 80px 30px;
-  background: rgb(24, 24, 24);
+  background: var(--c-black-mute);
   border-radius: 20px;
   margin: 5px;
   width: calc((100% - 20px) /3);
@@ -172,7 +172,7 @@ h5 {
     margin: 5px 0;
 
     &:hover {
-      background: inherit;
+      background: var(--c-black-mute);
 
       &::before {
         display: none;

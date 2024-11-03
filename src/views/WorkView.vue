@@ -112,7 +112,7 @@ export default {
     }
 
     .project.cards {
-      padding-bottom: 2rem≠;
+      padding-bottom: 2rem;
     }
 
     h3 {
