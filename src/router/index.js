@@ -9,11 +9,11 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
     },
     {
-      path: '/work',
+      path: 'portfolio/work',
       component: () => import('../views/WorkView.vue'),
     },
     {
-      path: '/:notFound(.*)',
+      path: 'portfolio/:notFound(.*)',
       component: () => import('../views/HomeView.vue'),
     },
   ],
