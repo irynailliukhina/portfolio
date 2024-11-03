@@ -35,11 +35,11 @@ export default {
       links: [
         {
           text: "About",
-          route: "/"
+          route: "/portfolio"
         },
         {
           text: "Work",
-          route: "/work"
+          route: "/portfolio/work"
         }],
       contact: {
         text: "Contact",
