@@ -217,6 +217,12 @@ export default {
   }
 }
 
+@media (max-width: 480px) {
+  .wrapper .main .greetings {
+    margin-top: 4rem;
+  }
+}
+
 @keyframes moveAround {
   0% {
     transform: translate(0, 0);
