@@ -43,11 +43,14 @@ export default {
 .wrapper {
   overflow-y: clip;
 
-
   .main {
-    height: calc(100vh - 80px);
     display: flex;
+    height: 100%
   }
+}
+
+.component {
+  height: calc(100vh - 64px);
 }
 
 .greetings {

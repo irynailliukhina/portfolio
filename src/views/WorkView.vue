@@ -54,7 +54,7 @@ export default {
         {
           picture: "/portfolio/projects/ttt.png",
           name: "Tic-tac-toe game",
-          desc: "This project was part of my React.js studies, where I explored foundational concepts such as components and state management. Through building this project.",
+          desc: "This project was part of my React.js studies, where I explored foundational concepts such as components and state management through building this project.",
           linkLive: "https://irynailliukhina.github.io/tic-tac-toe/",
           linkSourse: "https://github.com/irynailliukhina/tic-tac-toe"
         },

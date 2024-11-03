@@ -7,7 +7,7 @@
 
     <div class="links" :class="{ 'open': menuOpen }">
       <ul class="links__wrapper mobile-menu">
-        <MenuLink v-for="link in links" :key="link" :link="link" />
+        <MenuLink v-for="link in links" :key="link" :link="link" @click="menuOpen = false" />
         <MenuLink :link=contact @click.prevent="openPopup" />
         <a :href="pdfUrl" download="CV_Iryna_Illiukhina.pdf">
           <button class="links__button">Download CV</button>

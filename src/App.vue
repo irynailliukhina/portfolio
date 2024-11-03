@@ -1,7 +1,7 @@
 <template>
   <RouterView v-slot="slotProps">
     <SpinnerCustom :loading="loading" />
-    <Transition name="route" mode="out-in">
+    <Transition name="route" mode="out-in" class="transition">
       <div v-if="!loading">
         <component :is="slotProps.Component" class="component"></component>
       </div>
@@ -36,23 +36,9 @@ export default {
 </script>
 
 <style lang="scss">
-/* .route-enter-from {
-  transform: translateY(-40px)
+.transition {
+  height: 100%;
 }
-
-.route-leave-to {
-  transform: translateY(-40px)
-}
-
-.route-enter-active,
-.route-leave-active {
-  transition: all .4s ease-out;
-}
-
-.route-enter-to,
-.route-leave-from {
-  transform: translateY(0);
-} */
 
 @media (max-width: 767px) {
   .component {

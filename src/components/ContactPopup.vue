@@ -1,7 +1,7 @@
 <template>
   <div class="modal__mask">
     <div class="modal__wrapper" @click.self="$emit('close')">
-      <div class="modal__container">
+      <div v-if="content === 'modal'" class="modal__container">
         <div class="modal__header text-gradient">
           Contact Me
         </div>
@@ -22,6 +22,26 @@
           <button type="submit" class="send">Send</button>
         </form>
       </div>
+      <div v-if="content === 'success'" class="modal__container">
+        <div class="success">
+          <h3 class="modal__success">Your request was sent!</h3>
+          <button class="modal-default-button cancel" @click="$emit('close')">
+            Ok
+          </button>
+        </div>
+      </div>
+      <div v-if="content === 'error'" class="modal__container">
+        <div class="error">
+          <h3>Your request was not sent!</h3>
+          <p>Something went wrong. Please, try to send message <a class="email" href="mailto:irynailliukhina@gmail.com">
+              here.</a>
+          </p>
+          <button class="modal-default-button cancel" @click="$emit('close')">
+            <font-awesome-icon :icon="['fas', 'xmark']" />
+          </button>
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +50,11 @@
 import emailjs from '@emailjs/browser';
 
 export default {
+  data() {
+    return {
+      content: 'modal'
+    }
+  },
   methods: {
     sendEmail() {
       emailjs
@@ -38,10 +63,11 @@ export default {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
+            this.content = 'success';
           },
           (error) => {
             console.log('FAILED...', error.text);
+            this.content = 'error';
           },
         );
     },
@@ -109,32 +135,32 @@ export default {
       display: block;
       font-size: 10px;
     }
+  }
 
-    button {
-      background: none;
-      border-radius: 5px;
-      padding: 15px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--color-text);
-      transition: .5s;
-      margin-right: 10px;
-      cursor: pointer;
+  button {
+    background: none;
+    border-radius: 5px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-text);
+    transition: .5s;
+    margin-right: 10px;
+    cursor: pointer;
 
-      &.cancel {
-        border: 1px solid var(--c-purple);
+    &.cancel {
+      border: 1px solid var(--c-purple);
 
-        &:hover {
-          background: var(--c-purple);
-        }
+      &:hover {
+        background: var(--c-purple);
       }
+    }
 
-      &.send {
-        border: 1px solid var(--c-yellow);
+    &.send {
+      border: 1px solid var(--c-yellow);
 
-        &:hover {
-          background: var(--c-yellow);
-        }
+      &:hover {
+        background: var(--c-yellow);
       }
     }
   }
@@ -174,6 +200,44 @@ export default {
         border-color: var(--c-yellow);
       }
     }
+  }
+
+  .success {
+    h3 {
+      margin: 5rem 0;
+    }
+  }
+
+  .error {
+    margin: 5rem 0;
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    a {
+      color: var(--c-yellow);
+      font-weight: 800;
+    }
+
+    &>button {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      font-size: 2rem;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__container {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>
