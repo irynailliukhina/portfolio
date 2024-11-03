@@ -170,6 +170,22 @@ h5 {
   .card {
     width: 100%;
     margin: 5px 0;
+
+    &:hover {
+      background: inherit;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .source {
+      color: var(--c-yellow);
+    }
+
+    .live {
+      color: var(--c-purple);
+    }
   }
 }
 </style>
