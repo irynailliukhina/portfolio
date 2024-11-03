@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 console.log(import.meta.env.BASE_URL)
 
 const router = createRouter({
-  history: createWebHistory('/portfolio'),
+  history: createWebHistory('/portfolio/io/'),
   routes: [
     {
       path: '/',
