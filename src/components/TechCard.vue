@@ -57,6 +57,10 @@ export default {
     width: calc((100% - 30px) / 4);
     margin: 5px;
 
+    &:hover {
+      animation: none;
+    }
+
     &:nth-child(4n + 1) {
       margin-left: 0;
     }
