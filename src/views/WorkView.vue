@@ -60,7 +60,7 @@ export default {
         },
         {
           picture: "/portfolio/projects/excel.png",
-          name: "Excel JavaScript Copy",
+          name: "Excel JavaScript",
           desc: "This project is a pure JavaScript implementation that mimics the core functionalities of Microsoft Excel, allowing users to create, edit, and manage spreadsheet-like data.",
           linkSourse: "https://github.com/irynailliukhina/excel/"
         },
@@ -70,7 +70,7 @@ export default {
           desc: "I developed an investment calculator to solidify my understanding of React fundamentals and create a practical tool for personal use. This project allowed me to apply core React concepts, such as component structure, state management, and props, resulting in a functional, user-friendly application for calculating investment growth over time.",
           linkLive: "https://irynailliukhina.github.io/investment-calculator/",
           linkSourse: "https://github.com/irynailliukhina/investment-calculator"
-        },
+        }
       ]
     }
   },

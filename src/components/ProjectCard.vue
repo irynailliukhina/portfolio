@@ -82,12 +82,9 @@ export default {
   }
 
   &__img-wrap {
-    height: 200px;
-    margin: 0 auto;
-
     img {
-      height: 100%;
-      width: auto;
+      height: auto;
+      width: 100%;
       opacity: 0;
       transition: opacity 1s ease-in;
     }
@@ -113,7 +110,6 @@ export default {
 
       }
     }
-
   }
 
   .source {
