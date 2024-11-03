@@ -39,7 +39,7 @@ export default {
         },
         {
           text: "Work",
-          route: "/portfolio/work"
+          route: "/portfolio/#/work"
         }],
       contact: {
         text: "Contact",
