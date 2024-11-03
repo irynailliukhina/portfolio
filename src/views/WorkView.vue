@@ -23,36 +23,36 @@ export default {
       technologies: [
         {
           name: "Vue.js",
-          icon: "/icons/vue.svg"
+          icon: "portfolio/icons/vue.svg"
         },
         {
           name: "JavaScript",
-          icon: "/icons/javascript.svg"
+          icon: "portfolio/icons/javascript.svg"
         },
         {
           name: "Magento",
-          icon: "/icons/magento.svg"
+          icon: "portfolio/icons/magento.svg"
         },
         {
           name: "HTML",
-          icon: "/icons/html.svg"
+          icon: "portfolio/icons/html.svg"
         },
         {
           name: "CSS",
-          icon: "/icons/css.svg"
+          icon: "portfolio/icons/css.svg"
         },
         {
           name: "Jquery",
-          icon: "/icons/jquery.svg"
+          icon: "portfolio/icons/jquery.svg"
         },
         {
           name: "React.js",
-          icon: "/icons/react.svg"
+          icon: "portfolio/icons/react.svg"
         }
       ],
       projects: [
         {
-          picture: "/projects/ttt.png",
+          picture: "portfolio/projects/ttt.png",
           name: "Tic-tac-toe game",
           desc: "This project was part of my React.js studies, where I explored foundational concepts such as components and state management. Through building this project.",
           linkLive: "https://irynailliukhina.github.io/tic-tac-toe/",
