@@ -72,6 +72,14 @@ export default {
     width: calc((100% - 20px) /3);
     margin: 5px;
 
+    &:nth-child(4n + 1) {
+      margin-left: 5px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 5px;
+    }
+
     &:nth-child(3n + 1) {
       margin-left: 0;
     }

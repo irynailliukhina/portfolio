@@ -143,7 +143,6 @@ export default {
     transform: translate(300%);
     transition: .5s ease-out;
     z-index: 1000;
-    overflow-y: clip;
     top: 0;
 
     &::before {
