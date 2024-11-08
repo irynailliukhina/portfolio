@@ -59,6 +59,13 @@ export default {
           linkSourse: "https://github.com/irynailliukhina/tic-tac-toe"
         },
         {
+          picture: "/portfolio/projects/coaches.png",
+          name: "Coaches portal",
+          desc: "This project was part of my Vue.js studies, where I explored routing, VUEX, authentication concepts.",
+          linkLive: "https://coaches-8a223.web.app/",
+          linkSourse: "https://github.com/irynailliukhina/coaches"
+        },
+        {
           picture: "/portfolio/projects/excel.png",
           name: "Excel JavaScript",
           desc: "This project is a pure JavaScript implementation that mimics the core functionalities of Microsoft Excel, allowing users to create, edit, and manage spreadsheet-like data.",
