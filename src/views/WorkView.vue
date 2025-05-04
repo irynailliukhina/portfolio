@@ -59,6 +59,13 @@ export default {
           linkSourse: "https://github.com/irynailliukhina/tic-tac-toe"
         },
         {
+          picture: "src/assets/projects/coaches.png",
+          name: "Coaches portal",
+          desc: "This project was part of my Vue.js studies, where I explored routing, VUEX, authentication concepts.",
+          linkLive: "https://coaches-8a223.web.app/",
+          linkSourse: "https://github.com/irynailliukhina/coaches"
+        },
+        {
           picture: "src/assets/projects/excel.png",
           name: "Excel JavaScript Copy",
           desc: "This project is a pure JavaScript implementation that mimics the core functionalities of Microsoft Excel, allowing users to create, edit, and manage spreadsheet-like data.",
@@ -70,24 +77,6 @@ export default {
           desc: "I developed an investment calculator to solidify my understanding of React fundamentals and create a practical tool for personal use. This project allowed me to apply core React concepts, such as component structure, state management, and props, resulting in a functional, user-friendly application for calculating investment growth over time.",
           linkLive: "https://irynailliukhina.github.io/investment-calculator/",
           linkSourse: "https://github.com/irynailliukhina/investment-calculator"
-        }, {
-          picture: "src/assets/projects/1.png",
-          name: "Rapala",
-          desc: "Worked as a part of the team. Used VSF, less, magento",
-          linkLive: "google.com",
-          linkSourse: "google.com"
-        }, {
-          picture: "src/assets/1.png",
-          name: "Rapala",
-          desc: "Worked as a part of the team. Used VSF, less, magento, Worked as a part of the team. Used VSF, less, magento",
-          linkLive: "google.com",
-          linkSourse: "google.com"
-        }, {
-          picture: "src/assets/1.png",
-          name: "Rapala",
-          desc: "Worked as a part of the team. Used VSF, less, magento",
-          linkLive: "google.com",
-          linkSourse: "google.com"
         }
       ]
     }

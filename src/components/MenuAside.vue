@@ -9,7 +9,7 @@
       <ul class="links__wrapper mobile-menu">
         <MenuLink v-for="link in links" :key="link" :link="link" />
         <MenuLink :link=contact @click.prevent="openPopup" />
-        <a :href="pdfUrl" download="CV_Iryna_Illiukhina.pdf">
+        <a :href="pdfUrl" download="cv.pdf">
           <button class="links__button">Download CV</button>
         </a>
       </ul>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import pdfFile from '../assets/CV_Iryna_Illiukhina.pdf';
+import pdfFile from '../assets/cv.pdf';
 import MenuLink from './MenuLink.vue';
 import ContactPopup from './ContactPopup.vue';
 
@@ -38,7 +38,7 @@ export default {
           route: "/"
         },
         {
-          text: "Work",
+          text: "Skills and projects",
           route: "/work"
         }],
       contact: {

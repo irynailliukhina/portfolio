@@ -13,11 +13,6 @@ export default {
   },
   props: {
     link: Object
-  },
-  methods: {
-
-  },
-  computed: {
   }
 }
 </script>

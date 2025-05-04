@@ -86,8 +86,8 @@ export default {
     margin: 0 auto;
 
     img {
-      height: 100%;
-      width: auto;
+      height: auto;
+      width: 100%;
       opacity: 0;
       transition: opacity 1s ease-in;
     }

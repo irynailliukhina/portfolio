@@ -23,6 +23,28 @@ export default {
   },
   mounted() {
     window.addEventListener('load', this.handlePageLoad);
+
+    fetch('https://portfolio-a40d9-default-rtdb.europe-west1.firebasedatabase.app/visitors.json', {
+      method: 'POST',
+      body: JSON.stringify({
+        page: window.location.pathname,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        timestamp: new Date().toISOString()
+      }),
+    }).then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    }).then(data => {
+      console.log('Data sent successfully:', data);
+    }).catch(error => {
+      console.error('Error sending data:', error);
+    });
+
   },
   methods: {
     handlePageLoad() {
@@ -36,24 +58,6 @@ export default {
 </script>
 
 <style lang="scss">
-/* .route-enter-from {
-  transform: translateY(-40px)
-}
-
-.route-leave-to {
-  transform: translateY(-40px)
-}
-
-.route-enter-active,
-.route-leave-active {
-  transition: all .4s ease-out;
-}
-
-.route-enter-to,
-.route-leave-from {
-  transform: translateY(0);
-} */
-
 @media (max-width: 767px) {
   .component {
     &::before {
