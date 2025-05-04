@@ -39,8 +39,6 @@ export default {
         throw new Error('Network response was not ok');
       }
       return response.json();
-    }).then(data => {
-      console.log('Data sent successfully:', data);
     }).catch(error => {
       console.error('Error sending data:', error);
     });
